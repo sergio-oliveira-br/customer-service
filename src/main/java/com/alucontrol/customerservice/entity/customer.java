@@ -17,8 +17,8 @@ public class customer {
     private Long id;
 
     @NotBlank(message = "O nome é um campo obrigatorio, e precisar ser preenchido")
-    
     private String name;
+    
     private String phone;
     private String address;
     private String city;
