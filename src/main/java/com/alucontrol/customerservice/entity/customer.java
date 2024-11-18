@@ -10,7 +10,7 @@ import lombok.Data;
 
 @Entity
 @Data
-public class customer {
+public class Customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,7 +18,7 @@ public class customer {
 
     @NotBlank(message = "O nome é um campo obrigatorio, e precisar ser preenchido")
     private String name;
-    
+
     private String phone;
     private String address;
     private String city;
