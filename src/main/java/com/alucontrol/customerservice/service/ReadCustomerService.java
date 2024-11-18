@@ -1,7 +1,7 @@
 package com.alucontrol.customerservice.service;
 
 import com.alucontrol.customerservice.entity.Customer;
-import com.alucontrol.customerservice.exceptions.ResourceNotFoundException;
+import com.alucontrol.customerservice.exceptions.CustomerNotFoundException;
 import com.alucontrol.customerservice.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,7 +25,7 @@ public class ReadCustomerService {
         if (customer.isPresent()) {
             return customer.get();
         }
-        throw new ResourceNotFoundException("Cliente id '" + id + "' não encontrado");
+        throw new CustomerNotFoundException("Cliente id '" + id + "' não encontrado");
     }
 
     public List<Customer> findAllCustomer() {
