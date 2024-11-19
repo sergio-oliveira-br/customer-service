@@ -26,4 +26,11 @@ public class ReadCustomerController {
         Customer customer = readCustomerService.findCustomerById(id);
         return ResponseEntity.ok(customer.getName());
     }
+
+    @GetMapping
+    public ResponseEntity<List<Customer>> getAllCustomers() {
+
+        List<Customer> allCustomer = readCustomerService.findAllCustomer();
+        return ResponseEntity.ok(allCustomer);
+    }
 }
