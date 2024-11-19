@@ -78,11 +78,14 @@
 
 
         
-        <!-- The main library for creating declarative HTTP clients -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>
+        <!-- The main library for creating declarative HTTP clients
+            Services such as inventory-service and customer-service,
+            which only register in Eureka, do not need the dependency of Feign.
+            Only that of the client Eureka -->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-openfeign</artifactId>-->
+<!--        </dependency>-->
 
 
         <!-- Facilitates development with automatic
