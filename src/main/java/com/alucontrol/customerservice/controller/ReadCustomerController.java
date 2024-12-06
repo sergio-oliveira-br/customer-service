@@ -25,9 +25,7 @@ public class ReadCustomerController {
     @GetMapping("/{id}")
     public ResponseEntity<String> getCustomerNameById(@PathVariable Long id) {
 
-        System.out.println("Customer Service: Acessando customer name by ID:" + id);
         Customer customer = readCustomerService.findCustomerById(id);
-        System.out.println("Dados encontrados: " + customer);
         return ResponseEntity.ok(customer.getName());
     }
 
