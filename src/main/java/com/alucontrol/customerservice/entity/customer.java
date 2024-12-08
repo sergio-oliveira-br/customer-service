@@ -8,6 +8,8 @@ import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
+import java.math.BigDecimal;
+
 @Entity
 @Data
 public class Customer {
@@ -22,4 +24,5 @@ public class Customer {
     private String phone;
     private String address;
     private String city;
+    private BigDecimal totalSpent;
 }
